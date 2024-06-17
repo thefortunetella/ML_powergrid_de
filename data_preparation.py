@@ -20,9 +20,8 @@ def load_data():
 def prepare_features(data):
     # Definir as variáveis de entrada (features) e saída (target)
     X = data[['edge_delta', 'local_delta', 'vertex_global_delta']]
-    # Supondo que exista uma coluna de criticidade, se não, precisamos definir um critério
-    y = data['criticidade']  # Você pode precisar ajustar isso dependendo do seu dataset real
-
+    # criar coluna/criterio de criticidade
+    y = data['criticidade']  
     return X, y
 
 if __name__ == "__main__":
